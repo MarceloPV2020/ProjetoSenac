@@ -1,52 +1,88 @@
-<DOCTYPE! html>
-    <html>
-        <head>
-            <title>Atividade 3</title>
-            <meta charset="UTF-8">
-            <style>
-               .divIngredientes{
-                font-family: 'Courier New';
-                font-size: 20px;
-                transition: background-color 0.8s ease, transform 0.9s ease;
-               }
-               .divIngredientes:hover{
-                background-color: rgb(200, 224, 233);
-                transform: scale(1.1);
-               }
-               .divInstrucoes{
-                font-family: 'Courier New';
-                font-size: 16px;
-                transition: background-color 0.8s ease, transform 0.9s ease;
-               }
-               .divInstrucoes:hover{
-                background-color: rgb(200, 224, 233);
-                transform: scale(1.1);
-               }
-            </style>
-        </head>
-        <body>
-            <h1>Receita de Bolo Simples</h1>   
-            <p style="font-weight:bold;font-size: 20px;">Ingredientes:</p>
-            <div class="divIngredientes">
-                <ul>
-                    <li>2 xícaras (chá) de açúcar</li>
-                    <li>4 colheres (sopa) de margarina</li>
-                    <li>1 e 1/2 xícara (chá) de leite</li>
-                    <li>3 xícaras (chá) de farinha de trigo</li>
-                    <li>3 ovos</li>
-                    <li>1 colher (sopa) bem cheia de fermento em pó</li>
-                </ul>
-            </div>
-            <p style="font-weight:bold;font-size: 20px;">Instruções:</p>
-            <div class="divInstrucoes">
-                <ol>
-                    <li>Misture os ingredientes secos</li>
-                    <li>Adicione os ingredientes úmidos</li>
-                    <li>Mexa até ficar uma massa homogênea</li>
-                    <li>Coloque em uma forma untada</li>
-                    <li>Asse a 180 graus em um forno pré aquecido</li>                
-                </ol> 
-            </div>           
-            <img src="bolo.png">           
-        </body>
-    </html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Contato</title>
+    <style>
+        body, h2, label, input, textarea, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+        }
+        .contact-form {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 0 auto;
+        }
+        .contact-form h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #333;
+        }
+        .contact-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="contact-form">
+            <h2>Formulário de Contato</h2>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Assunto:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
